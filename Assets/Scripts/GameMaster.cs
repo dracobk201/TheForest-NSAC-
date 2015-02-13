@@ -6,16 +6,25 @@ public class GameMaster : MonoBehaviour {
 	private static GameMaster _instance;
 
 	#region variables
-	//public int varEnergiaMaxima = 6;
-	public int varEnergiaDisponible = 6;
-	public int varEspaciosDisponibles = 1;
+		//public int varEnergiaMaxima = 6;
+		public int varEnergiaDisponible = 6;
+		public int varEspaciosDisponibles = 1;
+	#endregion
+
+	#region variables booleanas
+		public bool varObjecto1 = true;
+		public bool varObjecto2 = true; 
+		public bool varObjecto3 = true; 
+		public bool varObjecto4 = true; 
+		public bool varObjecto5 = true; 
 	#endregion
 
 	#region GameObject
-	public GameObject goTextoEnergia;
-	public GameObject goTextoObjetos;
-	public GameObject goTextoDescrip;
+		public GameObject goTextoEnergia;
+		public GameObject goTextoObjetos;
+		public GameObject goTextoDescrip;
 	#endregion
+
 	public static GameMaster instance
 	{
 		get
