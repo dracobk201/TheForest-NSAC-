@@ -8,22 +8,33 @@ public class GameMaster : MonoBehaviour {
 	#region variables
 		//public int varEnergiaMaxima = 6;
 		public int varEnergiaDisponible = 6;
-		public int varEspaciosDisponibles = 1;
-	#endregion
-
-	#region variables booleanas
-		public bool varObjecto1 = true;
-		public bool varObjecto2 = true; 
-		public bool varObjecto3 = true; 
-		public bool varObjecto4 = true; 
-		public bool varObjecto5 = true; 
+		public int varEspaciosDisponibles = 6;
+		//public bool[] casillas = new bool[6] {false, false, false, false, false, false};
+	public bool[] casillas;
 	#endregion
 
 	#region GameObject
 		public GameObject goTextoEnergia;
 		public GameObject goTextoObjetos;
 		public GameObject goTextoDescrip;
+		public GameObject goObjecto1;
+		public GameObject goObjecto2; 
+		public GameObject goObjecto3; 
+		public GameObject goObjecto4; 
+		public GameObject goObjecto5; 
+		public GameObject goObjecto6; 
+
+		public Texture2D mango;
 	#endregion
+
+	/*#region Ubicaciones
+		public Vector3 casilla1 = new Vector3(208,-76,0);
+		public Vector3 casilla2 = new Vector3(298,-76,0);
+		public Vector3 casilla3 = new Vector3(208,-117,0);
+		public Vector3 casilla4 = new Vector3(298,-117,0);
+		public Vector3 casilla5 = new Vector3(208,-156,0);
+		public Vector3 casilla6 = new Vector3(298,-156,0);
+	#endregion*/
 
 	public static GameMaster instance
 	{
@@ -35,5 +46,9 @@ public class GameMaster : MonoBehaviour {
 				_instance = GameObject.FindObjectOfType<GameMaster>();
 			return _instance;
 		}
+	}
+
+	void Start () {
+		casillas = new bool[6] {false, false, false, false, false, false};
 	}
 }

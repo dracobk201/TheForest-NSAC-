@@ -21,6 +21,7 @@ public class scrObjetoBloque : MonoBehaviour {
 				GameMaster.instance.varEspaciosDisponibles--;
 				GameMaster.instance.goTextoObjetos.GetComponent<Text>().text = "Disponible = " + GameMaster.instance.varEspaciosDisponibles;
 				GameMaster.instance.goTextoDescrip.GetComponent<Text>().text = "Acabas de agarrar un objeto";
+
 			} else {
 				Debug.Log("Ya tienes un objeto en la mano");
 				GameMaster.instance.goTextoDescrip.GetComponent<Text>().text = "Ya tienes un objeto en la mano";

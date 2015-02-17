@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ControladorPersonaje.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Documents\EscapeKaus\Assets\Scripts\scrLaser.cs">
     <Files>
-      <File FileName="Assets\Scripts\scrPlayerSkills.cs" Line="17" Column="1" />
-      <File FileName="Assets\Scripts\ControladorPersonaje.cs" Line="65" Column="25" />
+      <File FileName="..\..\Documents\EscapeKaus\Assets\Scripts\scrLaser.cs" Line="9" Column="26" />
+      <File FileName="..\..\Documents\EscapeKaus\Assets\Scripts\Player.cs" Line="30" Column="31" />
+      <File FileName="Assets\Scripts\ControladorPersonaje.cs" Line="72" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
