@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Documents\EscapeKaus\Assets\Scripts\Player.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scrControlPersonaje.cs">
     <Files>
-      <File FileName="..\..\Documents\EscapeKaus\Assets\Scripts\Player.cs" Line="30" Column="1" />
+      <File FileName="Assets\Scripts\Inventario\SlotScript.cs" Line="41" Column="4" />
+      <File FileName="Assets\Scripts\Inventario\ItemDatabase.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Inventario\item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrControlPersonaje.cs" Line="38" Column="23" />
+      <File FileName="Assets\Scripts\scrCar.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\GameMaster.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

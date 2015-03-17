@@ -14,18 +14,27 @@ public class scrObjetoBloque : MonoBehaviour {
 	
 	}
 
-	void OnTriggerStay(Collider collider) {
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			if (GameMaster.instance.varEspaciosDisponibles != 0) {
-				Debug.Log("Acabas de agarrar un objeto");
-				GameMaster.instance.varEspaciosDisponibles--;
-				GameMaster.instance.goTextoObjetos.GetComponent<Text>().text = "Disponible = " + GameMaster.instance.varEspaciosDisponibles;
-				GameMaster.instance.goTextoDescrip.GetComponent<Text>().text = "Acabas de agarrar un objeto";
+	void OnTriggerEnter(Collider other) {
+		if (Input.GetKey (KeyCode.E) && (other.tag == "Player")) {			
+				if (GameMaster.instance.varEspaciosDisponibles != 0) {
+					GameMaster.instance.varEspaciosDisponibles--;
+					/*while (i < GameMaster.instance.casillas.Length){
+						if (GameMaster.instance.casillas[i] == false )
+						{
+							//Image tmp = GameMaster.instance.goObjecto1.GetComponent<Image>();
+							//tmp = GameMaster.instance.mango;
+							GameMaster.instance.goObjecto1.SetActive(true);
+							////////GameMaster.instance.goObjecto1.transform.position = casilla1;
+							other.gameObject.SetActive(false);
+							GameMaster.instance.casillas[i] = true;
+							break;
 
-			} else {
-				Debug.Log("Ya tienes un objeto en la mano");
-				GameMaster.instance.goTextoDescrip.GetComponent<Text>().text = "Ya tienes un objeto en la mano";
-			}
-		}
+						}
+						i++;
+					}*/
+				} else {
+					GameMaster.instance.goTextoDescrip.GetComponent<Text>().text = "No tienes espacios disponibles";
+				}
 	}
+}
 }
