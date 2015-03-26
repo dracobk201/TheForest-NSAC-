@@ -19,12 +19,13 @@ public class scrPasodeVida : MonoBehaviour {
 		if (GameMaster.instance.varEnergiaMaxima >= 0f) {
             GameMaster.instance.varEnergiaMaxima = restaDeVida;// *Time.deltaTime;
 			GameMaster.instance.goTextoDescrip.GetComponent<Text> ().text = "Energia= " + Mathf.RoundToInt(GameMaster.instance.varEnergiaMaxima);
-            //GameMaster.instance.imgBarraVida.fillMethod = Image.FillMethod.Vertical;
-            //Debug.Log(GameMaster.instance.imgBarraVida.GetComponent<Image>().fillAmount);
-            //GameMaster.instance.imgBarraVida.GetComponent<Image>().fillAmount = (restaDeVida / 100f) * Time.deltaTime;
+            GameMaster.instance.imgBarraVida.GetComponent<Image>().type = Image.Type.Filled;
+            GameMaster.instance.imgBarraVida.GetComponent<Image>().fillMethod = Image.FillMethod.Vertical;
+            Debug.Log(restaDeVida / 100f);
+            GameMaster.instance.imgBarraVida.GetComponent<Image>().fillAmount = (restaDeVida / 100f);// * Time.deltaTime;
 		}else{
-			GameMaster.instance.varEnergiaMaxima = 0f;
-			GameMaster.instance.goTextoDescrip.GetComponent<Text> ().text = Muerto;
+			GameMaster.instance.varEnergiaMaxima = 0f; 
+			//GameMaster.instance.goTextoDescrip.GetComponent<Text> ().text = Muerto;
 			FinDelJuego--;
 		}
 		if (FinDelJuego <= 0f)
