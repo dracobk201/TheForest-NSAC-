@@ -6,6 +6,8 @@ public class scrPasodeVida : MonoBehaviour {
 
 	string Muerto = "Ha sido derrotado";
 	float FinDelJuego = 50f;
+    float restaDeVida = 0;
+    float floDisminuir = 0.005f;
 	// Use this for initialization
 	void Start () {
 	
@@ -13,9 +15,13 @@ public class scrPasodeVida : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        restaDeVida = GameMaster.instance.varEnergiaMaxima - GameMaster.instance.varEnvenamiento - floDisminuir;
 		if (GameMaster.instance.varEnergiaMaxima >= 0f) {
-			GameMaster.instance.varEnergiaMaxima = GameMaster.instance.varEnergiaMaxima - GameMaster.instance.varEnvenamiento - 0.05f;
-			GameMaster.instance.goTextoDescrip.GetComponent<Text> ().text = "Energia= " + GameMaster.instance.varEnergiaMaxima;
+            GameMaster.instance.varEnergiaMaxima = restaDeVida;// *Time.deltaTime;
+			GameMaster.instance.goTextoDescrip.GetComponent<Text> ().text = "Energia= " + Mathf.RoundToInt(GameMaster.instance.varEnergiaMaxima);
+            //GameMaster.instance.imgBarraVida.fillMethod = Image.FillMethod.Vertical;
+            //Debug.Log(GameMaster.instance.imgBarraVida.GetComponent<Image>().fillAmount);
+            //GameMaster.instance.imgBarraVida.GetComponent<Image>().fillAmount = (restaDeVida / 100f) * Time.deltaTime;
 		}else{
 			GameMaster.instance.varEnergiaMaxima = 0f;
 			GameMaster.instance.goTextoDescrip.GetComponent<Text> ().text = Muerto;

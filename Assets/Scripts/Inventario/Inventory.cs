@@ -29,7 +29,7 @@ public class Inventory : MonoBehaviour {
 		database = GameObject.FindGameObjectWithTag ("ItemDatabase").GetComponent<ItemDatabase> ();
 
 		int x = -150;
-		int y = 80;
+		int y = 55;
 
         for (int i = 0; i < 3; i++) {
             for (int k = 0; k < 3; k++) {
@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour {
 				slot.GetComponent<SlotScript>().slotNumber = slotMount;
 				Slots.Add(slot);
 				Items.Add(new Item());
-                slot.transform.parent = this.gameObject.transform;
+                slot.transform.SetParent(this.gameObject.transform);
                 slot.name = "Slot" + i + "." + k;
                 slot.GetComponent<RectTransform>().localPosition = new Vector3(x, y, 0);
                 x = x + 55;

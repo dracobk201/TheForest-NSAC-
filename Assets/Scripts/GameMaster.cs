@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameMaster : MonoBehaviour {
@@ -15,10 +16,9 @@ public class GameMaster : MonoBehaviour {
 	#endregion
 
 	#region GameObject
-		public GameObject goTextoEnergia;
-		public GameObject goTextoObjetos;
 		public GameObject goTextoDescrip;
 		public GameObject cnvMenu;
+        public Image imgBarraVida;
 	#endregion
 
 	public static GameMaster instance

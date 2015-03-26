@@ -36,15 +36,15 @@ public class SlotScript : MonoBehaviour, IPointerDownHandler, IPointerEnterHandl
 			GameMaster.instance.varEnvenamiento = 0f;
 			GameMaster.instance.goTextoDescrip.GetComponent<Text> ().color = Color.white;
 		}
-		if (inventory.Items [slotNumber].itemID == 0 && GameMaster.instance.varInCar == true) {
+        Debug.Log(inventory.Items[slotNumber].itemID);
+		if (inventory.Items [slotNumber].itemID == 5 && GameMaster.instance.varInCar == true) {
 			Debug.Log("pasando");
 		}
-		Debug.Log (GameMaster.instance.varEnergiaMaxima);
+		//Debug.Log (GameMaster.instance.varEnergiaMaxima);
 		inventory.Items [slotNumber].itemName = null;
 		inventory.Items [slotNumber].itemID = 0;
 		inventory.Items [slotNumber].itemEnergy = 0;
 		inventory.Items [slotNumber].itemDesc = null;
-
 	}
 
 	public void OnPointerEnter (PointerEventData data) {
